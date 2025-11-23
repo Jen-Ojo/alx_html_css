@@ -1,0 +1,423 @@
+/* ===========================
+   GLOBAL VARIABLES & RESET
+   =========================== */
+:root {
+  --navy: #071428;
+  --navy-2: #0c2230;
+  --muted: #6b6b6b;
+  --accent: #b86cf0;
+  --accent-2: #c98ef6;
+  --white: #ffffff;
+
+  --max-width: 1100px;
+  --radius: 14px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   HEADER / NAVIGATION
+   =========================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: transparent;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: inline-block;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.cta {
+  background: var(--accent);
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: 28px;
+  font-weight: 700;
+}
+
+/* Outline CTA button */
+.outline-btn {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.18);
+  padding: 10px 18px;
+  border-radius: 28px;
+  color: rgba(255,255,255,0.9);
+  font-weight: 700;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.hero {
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: var(--white);
+  background-image: linear-gradient(180deg,
+      rgba(3, 10, 20, 0.6),
+      rgba(3, 10, 20, 0.85)),
+    url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-inner {
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  margin: 0;
+  letter-spacing: -1px;
+  font-weight: 900;
+}
+
+.hero p.lead {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 18px 0;
+  font-size: 1.15rem;
+}
+
+.btn-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+/* Chips */
+.chips {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.chip {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* ===========================
+   INSTRUCTORS
+   =========================== */
+.instructors {
+  background: linear-gradient(180deg,
+      rgba(2, 14, 26, 1),
+      rgba(2, 14, 26, 0.98));
+  padding: 56px 0;
+}
+
+.instructors-grid {
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.instructor {
+  width: 160px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.instructor img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid rgba(255, 255, 255, 0.06);
+}
+
+.instructor h4 {
+  margin: 10px 0 4px;
+  font-size: 1rem;
+}
+
+.instructor small {
+  color: var(--muted);
+  display: block;
+}
+
+/* ===========================
+   TESTIMONIAL
+   =========================== */
+.testimonial {
+  background: var(--accent);
+  color: var(--white);
+  padding: 48px 0;
+}
+
+.testimonial-inner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+}
+
+.testimonial p {
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+/* ===========================
+   TUTORIAL CARDS
+   =========================== */
+.tutorials {
+  padding: 48px 0;
+  background: #fff;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-title .accent {
+  color: var(--accent);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(10, 20, 30, 0.06);
+  overflow: hidden;
+}
+
+.card .thumb {
+  height: 120px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .meta {
+  padding: 14px;
+}
+
+.card h5 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ===========================
+   FEATURES / MEMBERSHIP
+   =========================== */
+.features {
+  background: var(--navy);
+  color: var(--white);
+  padding: 56px 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.smiley {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ===========================
+   FAQ SECTION
+   =========================== */
+.faq {
+  padding: 56px 0;
+  background: #fff;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.faq p {
+  color: var(--muted);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+  background: var(--navy-2);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 28px 0;
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-brand .small {
+  width: 28px;
+  height: 28px;
+}
+
+/* ===========================
+   RESPONSIVE BREAKPOINTS
+   =========================== */
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instructor {
+    width: 140px;
+  }
+}
+
+@media (max-width: 720px) {
+  nav ul {
+    display: none;
+  }
+
+  .hero {
+    min-height: 640px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
