@@ -1,4 +1,0 @@
-
-
-![Alt Text](Homepage.jpg)
-
