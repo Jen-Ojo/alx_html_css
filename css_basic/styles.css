@@ -1,36 +1,36 @@
-/* Make <body> a vertical flex container */
+/* BODY: container in column */
 body {
   display: flex;
   flex-direction: column;
-  margin: 0;
   height: 100vh;
+  margin: 0;
 }
 
-/* Make <main> a horizontal flex container */
+/* MAIN: container in row */
 main {
   display: flex;
   flex-direction: row;
-  flex: auto; /* take remaining space */
+  flex: auto;
 }
 
-/* Article takes 2/3 of the width */
+/* ARTICLE: takes 2/3 width */
 article {
   flex: 2;
-  overflow-y: auto;
   padding: 20px;
+  overflow-y: auto;
 }
 
-/* Aside takes 1/3 of the width */
+/* ASIDE: takes 1/3 width */
 aside {
   flex: 1;
-  overflow-y: auto;
+  background: #f2f2f2;
   padding: 20px;
-  background-color: #f0f0f0;
+  overflow-y: auto;
 }
 
-/* Optional: header and footer styling */
+/* HEADER + FOOTER styles */
 header, footer {
+  background: #ddd;
   padding: 20px;
-  background-color: #e4e4e4;
 }
 
