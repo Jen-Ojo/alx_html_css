@@ -1,15 +1,13 @@
 # Headphones Website
 
-This is a responsive headphones landing page built with HTML and CSS.
-It follows the Figma design specifications.
+This project is a responsive landing page built with HTML and CSS
+based on a Figma design.
 
 ## Features
-- Mobile responsive (switches layout at <=480px)
-- Links hover/active color: #FF6565
-- Buttons hover/active opacity: 0.9
-- Max width: 1000px, centered
+- Responsive design (mobile view at 480px or less)
+- Link hover/active color: #FF6565
+- Button hover/active opacity: 0.9
+- Max content width of 1000px centered
 
-## Setup
-1. Clone the repository:
-   git clone https://github.com/Jen-Ojo/alx_html_css.git
-2. Open `headphones/index.html` in a browser.
+## Author
+Jennifer Ojo
