@@ -1,0 +1,65 @@
+/* 7-styles.css — Animations for What we do and Our results rows */
+}
+
+
+@keyframes wiggle{
+0%{transform:rotate(-2deg)}
+25%{transform:rotate(3deg)}
+50%{transform:rotate(-1deg)}
+75%{transform:rotate(2deg)}
+100%{transform:rotate(0deg)}
+}
+
+
+@keyframes bounce{
+0%{transform:translateY(0)}
+30%{transform:translateY(-14px)}
+60%{transform:translateY(-6px)}
+100%{transform:translateY(0)}
+}
+
+
+@keyframes slow-rotate{
+0%{transform:rotate(0deg)}
+50%{transform:rotate(6deg)}
+100%{transform:rotate(0deg)}
+}
+
+
+@keyframes soft-scale{
+0%{transform:scale(1)}
+50%{transform:scale(1.06)}
+100%{transform:scale(1)}
+}
+
+
+@keyframes fadeblink{
+0%{opacity:1}
+45%{opacity:.4}
+100%{opacity:1}
+}
+
+
+/* Make sure hover wins over animation for clarity */
+.animate-once:hover, .animate-once-2:hover, .animate-bounce:hover, .animate-rotate:hover, .animate-scale:hover, .animate-opacity:hover{
+animation-play-state:paused; transform:translateY(-10px) scale(1.04) rotate(-.5deg); box-shadow:0 22px 48px rgba(2,6,23,0.14)
+}
+
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce){
+.animate-once, .animate-once-2, .animate-bounce, .animate-rotate, .animate-scale, .animate-opacity{animation:none}
+}
+
+
+/* Tweet CTA */
+.share{margin:0 0 .5rem}
+.tweet{display:inline-block;padding:.6rem 1rem;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none}
+.tweet:hover{filter:brightness(.95);transform:translateY(-3px)}
+
+
+/* Responsive */
+@media (max-width:520px){
+.container{padding:1rem}
+.items-row{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+}
