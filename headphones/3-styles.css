@@ -1,0 +1,63 @@
+/* Base styles reused */
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Arial;background:#fafafa;color:#111}
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+.section{padding:3rem 0}
+.section-title{margin:0;font-size:1.6rem}
+.section-subtitle{margin:.25rem 0 1.5rem;color:#666}
+
+
+/* Contact form */
+.contact-form{max-width:480px;margin:auto;display:flex;flex-direction:column;gap:1.2rem}
+
+
+.form-group{display:flex;flex-direction:column;gap:.3rem}
+label{font-size:.9rem;font-weight:600}
+
+
+input, textarea{
+padding:.75rem;
+font-size:1rem;
+border:1px solid #ccc;
+border-radius:6px;
+transition:border-color .2s, box-shadow .2s;
+}
+
+
+input:focus, textarea:focus{
+outline:none;
+border-color:#0a84ff;
+box-shadow:0 0 0 3px rgba(10,132,255,.15);
+}
+
+
+/* Validation feedback */
+input:invalid, textarea:invalid{border-color:#e5533d}
+input:valid, textarea:valid{border-color:#2ecc71}
+
+
+/* Button */
+.btn{
+padding:.75rem 1.25rem;
+border:none;
+border-radius:999px;
+background:#0a84ff;
+color:#fff;
+font-size:1rem;
+cursor:pointer;
+transition:transform .2s, box-shadow .2s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
+
+
+/* Small animation */
+.contact-form{animation:fadeUp .6s ease}
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(16px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+
+@media(max-width:500px){
+.container{padding:1rem}
+}
